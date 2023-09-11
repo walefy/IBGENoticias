@@ -8,5 +8,9 @@ const initialState: RootState = {
 export const newsSlice = createSlice({
   name: 'news',
   initialState,
-  reducers: {},
+  reducers: {
+    setNews: (state, action) => {
+      state.news = action.payload;
+    },
+  },
 });

@@ -1,3 +1,6 @@
+import { AnyAction } from '@reduxjs/toolkit';
+import { ThunkDispatch } from 'redux-thunk';
+
 export type News = {
   id: number;
   tipo: string;
@@ -22,6 +25,21 @@ export type News = {
   link: string;
 };
 
+export type ApiIBGEItem = News & { imagens: string };
+
+export type ApiIBGEResponse = {
+  count: number;
+  page: number;
+  totalPages: number;
+  nextPage: number | null;
+  previousPage: number | null;
+  showingFrom: number;
+  showingTo: number;
+  items: ApiIBGEItem[];
+};
+
 export type RootState = {
   news: News[];
 };
+
+export type Dispatch = ThunkDispatch<RootState, null, AnyAction>;
