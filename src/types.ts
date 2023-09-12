@@ -40,6 +40,7 @@ export type ApiIBGEResponse = {
 
 export type RootState = {
   news: News[];
+  favoritesNews: News[];
 };
 
 export type Dispatch = ThunkDispatch<RootState, null, AnyAction>;

@@ -3,6 +3,7 @@ import { RootState } from '../../types';
 
 const initialState: RootState = {
   news: [],
+  favoritesNews: [],
 };
 
 export const newsSlice = createSlice({
